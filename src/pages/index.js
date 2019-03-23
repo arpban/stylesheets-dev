@@ -16,14 +16,14 @@ const IndexPage = ({ data }) => (
 			<div
 				className="introduction"
 				style={{
-					marginTop: "120px",
+					marginTop: "40px",
 					marginBottom: "40px"
 				}}
 			>
 				<div
 					style={{
 						fontSize: "32px",
-						marginBottom: "10px",
+						marginBottom: "5px",
 					}}
 				>
 					Stylesheets.dev
@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => (
 				<div
 					style={{
 						fontSize: "24px",
-						opacity: "0.7",
+						color: "#666",
 						lineHeight: "32px",
 					}}
 				>
@@ -45,7 +45,7 @@ const IndexPage = ({ data }) => (
 				style={{
 					display: "flex",
 					flexWrap: "wrap",
-					margin: "0 -30px"
+					margin: "0 -20px"
 				}}
 			>
 				<ThemeCard
@@ -95,13 +95,15 @@ const IndexPage = ({ data }) => (
 			<div className="wrapper-1000">
 				<div className="footer-bottom" style={{
 
-					padding: "60px 0 35px",
+					padding: "35px 0",
 					display: "flex",
 					justifyContent: "space-between",
 					alignItems: "flex-end"
 				}}>
-					<div className="left">
-						© {new Date().getFullYear()}, Created with ♥️ at <a href="https://buildesk.co" target="_blank">Buildesk</a>
+					<div className="left" style={{
+						color: "#666"
+					}}>
+						© {new Date().getFullYear()}, Created at <a href="https://buildesk.co" target="_blank">Buildesk</a>
 					</div>
 
 					<div className="right" style={{
@@ -111,10 +113,10 @@ const IndexPage = ({ data }) => (
 					}}>
 						<small style={{
 							fontWeight: "bold",
-							opacity: "0.7"
+							color: "#666"
 						}}>Feedback & Support</small>
 						<a href="mailto:support@stylesheets.dev" style={{
-							fontSize: "18px"
+							fontSize: "16px"
 						}}>support@stylesheets.dev</a>
 					</div>
 
