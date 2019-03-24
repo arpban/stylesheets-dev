@@ -53,7 +53,16 @@ const IndexPage = ({ data }) => (
 					cover={data.shuttle.childImageSharp.fluid}
 					demo=""
 					purchase=""
-					price="49"
+					price="$ 49"
+					comingSoon={true}
+				/>
+
+				<ThemeCard
+					title="Lotus"
+					cover={data.lotus.childImageSharp.fluid}
+					demo="https://lotus.stylesheets.dev"
+					purchase="https://gum.co/lotus-theme"
+					price="FREE"
 				/>
 
 				<ThemeCard
@@ -61,7 +70,7 @@ const IndexPage = ({ data }) => (
 					cover={data.chronicles.childImageSharp.fluid}
 					demo="http://chronicles.arban.co"
 					purchase="https://gum.co/chronicles"
-					price="29"
+					price="$ 29"
 				/>
 
 				<ThemeCard
@@ -69,7 +78,7 @@ const IndexPage = ({ data }) => (
 					cover={data.mariner.childImageSharp.fluid}
 					demo="http://mariner.pamphlet.press"
 					purchase="https://gum.co/mariner"
-					price="29"
+					price="$ 29"
 				/>
 
 				<ThemeCard
@@ -77,7 +86,7 @@ const IndexPage = ({ data }) => (
 					cover={data.gt4.childImageSharp.fluid}
 					demo="http://gt4.pamphlet.press"
 					purchase="https://gum.co/gt4"
-					price="14"
+					price="$ 14"
 				/>
 
 				<ThemeCard
@@ -85,7 +94,7 @@ const IndexPage = ({ data }) => (
 					cover={data.pamphlet.childImageSharp.fluid}
 					demo="http://demo.pamphlet.arban.co"
 					purchase="https://gum.co/pamphlet"
-					price="14"
+					price="$ 14"
 				/>
 			</div>
 
@@ -101,9 +110,10 @@ const IndexPage = ({ data }) => (
 					alignItems: "flex-end"
 				}}>
 					<div className="left" style={{
-						color: "#666"
+						color: "#666",
+						fontSize: "16px"
 					}}>
-						© {new Date().getFullYear()}, Created at <a href="https://buildesk.co" target="_blank">Buildesk</a>
+						© {new Date().getFullYear()}, <a href="https://buildesk.co" target="_blank">Buildesk</a>
 					</div>
 
 					<div className="right" style={{
@@ -131,6 +141,14 @@ export default IndexPage
 export const query = graphql`
 	query {
 		shuttle: file(relativePath: { eq: "shuttle.png" }) {
+			childImageSharp {
+				fluid(maxWidth: 500) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+
+		lotus: file(relativePath: { eq: "lotus.png" }) {
 			childImageSharp {
 				fluid(maxWidth: 500) {
 					...GatsbyImageSharpFluid

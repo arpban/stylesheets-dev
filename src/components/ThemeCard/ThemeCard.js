@@ -4,11 +4,11 @@ import Img from "gatsby-image"
 
 import "./ThemeCard.scss"
 
-const ThemeCard = ({ title, cover, demo, purchase, price }) => (
+const ThemeCard = ({ title, cover, demo, purchase, price, comingSoon }) => (
 	<div className="theme-card">
 		<div className="card-wrapper">
 			<div className="browser">
-				<a href={demo}>
+				<a href={demo} target="_blank" rel="noopener noreferrer">
 					<div className="browser-title-bar">
 						<div className="circle" />
 						<div className="circle" />
@@ -19,7 +19,7 @@ const ThemeCard = ({ title, cover, demo, purchase, price }) => (
 					</div>
 					<div className="browser-overlay">
 						<div className="overlay-wrapper">
-							<div className="text">Preview</div>
+							<div className="text">{comingSoon ? "Coming Soon" : "Preview"}</div>
 						</div>
 					</div>
 				</a>
@@ -27,16 +27,16 @@ const ThemeCard = ({ title, cover, demo, purchase, price }) => (
 			<div className="details">
 				<div className="left">
 					<div className="title">
-						<a href={demo}>
+						<a href={demo} target="_blank" rel="noopener noreferrer">
 							{title}
 						</a>
 					</div>
 				</div>
 				<div className="right">
 					<div className="price">
-						$ {price} |{" "}
-						<a href={purchase} target="_blank">
-							Purchase
+						{price} 
+						<a hidden={comingSoon} href={purchase} target="_blank">
+							{price === "FREE" ? "Download" : "Purchase"}
 						</a>
 					</div>
 				</div>
@@ -47,7 +47,7 @@ const ThemeCard = ({ title, cover, demo, purchase, price }) => (
 
 ThemeCard.propTypes = {
 	title: PropTypes.string,
-	cover: PropTypes.string,
+	cover: PropTypes.object,
 	demo: PropTypes.string,
 	purchase: PropTypes.string,
 	price: PropTypes.string,
@@ -59,6 +59,7 @@ ThemeCard.defaultProps = {
 	demo: ``,
 	purchase: ``,
 	price: ``,
+	comingSoon: false
 }
 
 export default ThemeCard
