@@ -51,10 +51,9 @@ const IndexPage = ({ data }) => (
 				<ThemeCard
 					title="Shuttle"
 					cover={data.shuttle.childImageSharp.fluid}
-					demo=""
-					purchase=""
+					demo="http://shuttle.stylesheets.dev"
+					purchase="https://gum.co/shuttle-theme"
 					price="$ 49"
-					comingSoon={true}
 				/>
 
 				<ThemeCard
