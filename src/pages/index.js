@@ -125,9 +125,9 @@ const IndexPage = ({ data }) => (
 							fontWeight: "bold",
 							color: "#666"
 						}}>Feedback & Support</small>
-						<a href="mailto:support@stylesheets.dev" style={{
+						<a href="mailto:support@buildesk.co" style={{
 							fontSize: "16px"
-						}}>support@stylesheets.dev</a>
+						}}>support@buildesk.co</a>
 					</div>
 
 				</div>
