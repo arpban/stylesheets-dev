@@ -48,13 +48,13 @@ const IndexPage = ({ data }) => (
 					margin: "0 -20px"
 				}}
 			>
-				<ThemeCard
+				{/*<ThemeCard
 					title="Shuttle"
 					cover={data.shuttle.childImageSharp.fluid}
 					demo="http://shuttle.stylesheets.dev"
 					purchase="https://gum.co/shuttle-theme"
 					price="$ 49"
-				/>
+				/>*/}
 
 				<ThemeCard
 					title="Lotus"
