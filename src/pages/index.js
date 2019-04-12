@@ -10,7 +10,7 @@ import ThemeCard from "../components/ThemeCard/ThemeCard"
 
 const IndexPage = ({ data }) => (
 	<Layout>
-		<SEO title="Home" keywords={[`ghost`, `themes`, `blog`]} />
+		<SEO title="Home" keywords={[`ghost`, `theme`, `themes`, `blog`, `blogging`, `ghost theme`, `web design`]} />
 		<div className="wrapper-1000">
 			{/* Intro */}
 			<div
@@ -48,13 +48,21 @@ const IndexPage = ({ data }) => (
 					margin: "0 -20px"
 				}}
 			>
-				{/*<ThemeCard
+				<ThemeCard
+					title="Paperback"
+					cover={data.paperback.childImageSharp.fluid}
+					demo="https://paperback.stylesheets.dev"
+					purchase="https://gum.co/paperback-theme"
+					price="$ 45"
+				/>
+
+				<ThemeCard
 					title="Shuttle"
 					cover={data.shuttle.childImageSharp.fluid}
 					demo="http://shuttle.stylesheets.dev"
 					purchase="https://gum.co/shuttle-theme"
 					price="$ 49"
-				/>*/}
+				/>
 
 				<ThemeCard
 					title="Lotus"
@@ -85,7 +93,7 @@ const IndexPage = ({ data }) => (
 					cover={data.gt4.childImageSharp.fluid}
 					demo="http://gt4.pamphlet.press"
 					purchase="https://gum.co/gt4"
-					price="$ 14"
+					price="FREE"
 				/>
 
 				<ThemeCard
@@ -93,7 +101,7 @@ const IndexPage = ({ data }) => (
 					cover={data.pamphlet.childImageSharp.fluid}
 					demo="http://demo.pamphlet.arban.co"
 					purchase="https://gum.co/pamphlet"
-					price="$ 14"
+					price="$ 20"
 				/>
 			</div>
 
@@ -103,7 +111,7 @@ const IndexPage = ({ data }) => (
 			<div className="wrapper-1000">
 				<div className="footer-bottom" style={{
 
-					padding: "35px 0",
+					padding: "0 0 35px",
 					display: "flex",
 					justifyContent: "space-between",
 					alignItems: "flex-end"
@@ -139,7 +147,15 @@ export default IndexPage
 
 export const query = graphql`
 	query {
-		shuttle: file(relativePath: { eq: "shuttle.png" }) {
+		paperback: file(relativePath: { eq: "paperback.png" }) {
+			childImageSharp {
+				fluid(maxWidth: 500) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+
+		shuttle: file(relativePath: { eq: "shuttle_2.png" }) {
 			childImageSharp {
 				fluid(maxWidth: 500) {
 					...GatsbyImageSharpFluid
