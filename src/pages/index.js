@@ -48,6 +48,15 @@ const IndexPage = ({ data }) => (
 					margin: "0 -20px"
 				}}
 			>
+				{/*<ThemeCard
+					title="Sublime"
+					cover={data.sublime.childImageSharp.fluid}
+					demo=""
+					purchase=""
+					price="$ 45"
+					comingSoon="true"
+				/>*/}
+
 				<ThemeCard
 					title="Paperback"
 					cover={data.paperback.childImageSharp.fluid}
@@ -56,13 +65,13 @@ const IndexPage = ({ data }) => (
 					price="$ 45"
 				/>
 
-				{/*<ThemeCard
+				<ThemeCard
 					title="Shuttle"
 					cover={data.shuttle.childImageSharp.fluid}
 					demo="http://shuttle.stylesheets.dev"
 					purchase="https://gum.co/shuttle-theme"
 					price="$ 49"
-				/>*/}
+				/>
 
 				<ThemeCard
 					title="Lotus"
@@ -147,6 +156,14 @@ export default IndexPage
 
 export const query = graphql`
 	query {
+		sublime: file(relativePath: { eq: "sublime.png" }) {
+			childImageSharp {
+				fluid(maxWidth: 500) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+
 		paperback: file(relativePath: { eq: "paperback.png" }) {
 			childImageSharp {
 				fluid(maxWidth: 500) {
