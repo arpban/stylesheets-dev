@@ -48,14 +48,13 @@ const IndexPage = ({ data }) => (
 					margin: "0 -20px"
 				}}
 			>
-				{/*<ThemeCard
+				<ThemeCard
 					title="Sublime"
 					cover={data.sublime.childImageSharp.fluid}
-					demo=""
-					purchase=""
+					demo="https://sublime.stylesheets.dev"
+					purchase="https://gum.co/sublime"
 					price="$ 45"
-					comingSoon="true"
-				/>*/}
+				/>
 
 				<ThemeCard
 					title="Paperback"
