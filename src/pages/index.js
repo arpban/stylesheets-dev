@@ -163,7 +163,7 @@ export const query = graphql`
 			}
 		}
 
-		paperback: file(relativePath: { eq: "paperback.png" }) {
+		paperback: file(relativePath: { eq: "paperback2.png" }) {
 			childImageSharp {
 				fluid(maxWidth: 500) {
 					...GatsbyImageSharpFluid
