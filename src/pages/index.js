@@ -49,11 +49,19 @@ const IndexPage = ({ data }) => (
 				}}
 			>
 				<ThemeCard
+					title="Elementary"
+					cover={data.elementary.childImageSharp.fluid}
+					demo="https://elementary.stylesheets.dev"
+					purchase="https://gum.co/elementary-ghost-theme"
+					price="$ 24"
+				/>
+				
+				<ThemeCard
 					title="Sublime"
 					cover={data.sublime.childImageSharp.fluid}
 					demo="https://sublime.stylesheets.dev"
 					purchase="https://gum.co/sublime"
-					price="$ 45"
+					price="$ 29"
 				/>
 
 				<ThemeCard
@@ -61,7 +69,7 @@ const IndexPage = ({ data }) => (
 					cover={data.paperback.childImageSharp.fluid}
 					demo="https://paperback.stylesheets.dev"
 					purchase="https://gum.co/paperback-theme"
-					price="$ 45"
+					price="$ 29"
 				/>
 
 				<ThemeCard
@@ -89,6 +97,14 @@ const IndexPage = ({ data }) => (
 				/>
 
 				<ThemeCard
+					title="Pamphlet"
+					cover={data.pamphlet.childImageSharp.fluid}
+					demo="http://demo.pamphlet.arban.co"
+					purchase="https://gum.co/pamphlet"
+					price="$ 24"
+				/>
+
+				<ThemeCard
 					title="Mariner"
 					cover={data.mariner.childImageSharp.fluid}
 					demo="http://mariner.pamphlet.press"
@@ -102,14 +118,6 @@ const IndexPage = ({ data }) => (
 					demo="http://gt4.pamphlet.press"
 					purchase="https://gum.co/gt4"
 					price="FREE"
-				/>
-
-				<ThemeCard
-					title="Pamphlet"
-					cover={data.pamphlet.childImageSharp.fluid}
-					demo="http://demo.pamphlet.arban.co"
-					purchase="https://gum.co/pamphlet"
-					price="$ 20"
 				/>
 			</div>
 
@@ -155,6 +163,14 @@ export default IndexPage
 
 export const query = graphql`
 	query {
+		elementary: file(relativePath: { eq: "elementary.png" }) {
+			childImageSharp {
+				fluid(maxWidth: 500) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+
 		sublime: file(relativePath: { eq: "sublime.png" }) {
 			childImageSharp {
 				fluid(maxWidth: 500) {
