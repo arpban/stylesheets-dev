@@ -49,6 +49,14 @@ const IndexPage = ({ data }) => (
 				}}
 			>
 				<ThemeCard
+					title="Flamingo"
+					cover={data.flamingo.childImageSharp.fluid}
+					demo="https://flamingo.stylesheets.dev"
+					purchase="https://gum.co/flamingo"
+					price="$ 45"
+				/>
+
+				<ThemeCard
 					title="Elementary"
 					cover={data.elementary.childImageSharp.fluid}
 					demo="https://elementary.stylesheets.dev"
@@ -77,7 +85,7 @@ const IndexPage = ({ data }) => (
 					cover={data.shuttle.childImageSharp.fluid}
 					demo="http://shuttle.stylesheets.dev"
 					purchase="https://gum.co/shuttle-theme"
-					price="$ 49"
+					price="$ 45"
 				/>
 
 				<ThemeCard
@@ -163,6 +171,14 @@ export default IndexPage
 
 export const query = graphql`
 	query {
+		flamingo: file(relativePath: { eq: "flamingo.png" }) {
+			childImageSharp {
+				fluid(maxWidth: 500) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		
 		elementary: file(relativePath: { eq: "elementary.png" }) {
 			childImageSharp {
 				fluid(maxWidth: 500) {
