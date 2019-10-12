@@ -89,14 +89,6 @@ const IndexPage = ({ data }) => (
 				/>
 
 				<ThemeCard
-					title="Lotus"
-					cover={data.lotus.childImageSharp.fluid}
-					demo="https://lotus.stylesheets.dev"
-					purchase="https://gum.co/lotus-theme"
-					price="FREE"
-				/>
-
-				<ThemeCard
 					title="Chronicles"
 					cover={data.chronicles.childImageSharp.fluid}
 					demo="http://chronicles.arban.co"
@@ -113,11 +105,19 @@ const IndexPage = ({ data }) => (
 				/>
 
 				<ThemeCard
+					title="Lotus"
+					cover={data.lotus.childImageSharp.fluid}
+					demo="https://lotus.stylesheets.dev"
+					purchase="https://gum.co/lotus-theme"
+					price="FREE"
+				/>
+
+				<ThemeCard
 					title="Mariner"
 					cover={data.mariner.childImageSharp.fluid}
 					demo="http://mariner.pamphlet.press"
 					purchase="https://gum.co/mariner"
-					price="$ 29"
+					price="FREE"
 				/>
 
 				<ThemeCard
