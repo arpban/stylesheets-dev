@@ -144,7 +144,7 @@ const IndexPage = ({ data }) => (
 						color: "#666",
 						fontSize: "16px"
 					}}>
-						© {new Date().getFullYear()}, <a href="https://buildesk.co" target="_blank">Buildesk</a>
+						© {new Date().getFullYear()}, Stylesheets.dev
 					</div>
 
 					<div className="right" style={{
@@ -156,9 +156,9 @@ const IndexPage = ({ data }) => (
 							fontWeight: "bold",
 							color: "#666"
 						}}>Feedback & Support</small>
-						<a href="mailto:support@buildesk.co" style={{
+						<a href="mailto:support@stylesheets.dev" style={{
 							fontSize: "16px"
-						}}>support@buildesk.co</a>
+						}}>support@stylesheets.dev</a>
 					</div>
 
 				</div>
