@@ -144,7 +144,7 @@ const IndexPage = ({ data }) => (
 						color: "#666",
 						fontSize: "16px"
 					}}>
-						© {new Date().getFullYear()}, Stylesheets.dev
+						© {new Date().getFullYear()}, <a href="https://stylesheets.dev">Stylesheets.dev</a>
 					</div>
 
 					<div className="right" style={{
